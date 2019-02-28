@@ -7,6 +7,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>learnSpring Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+      <spring.version>4.1.1.RELEASE</spring.version>
+  </properties>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -30,6 +35,19 @@
     <scope>provided</scope>
 	</dependency>
     
+    <!-- 添加spring 依赖 -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+
   </dependencies>
   
   
