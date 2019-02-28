@@ -1,4 +1,4 @@
-package com.spring;
+package com.pojo;
 
 public class Family {
 	

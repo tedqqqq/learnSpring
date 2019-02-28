@@ -11,4 +11,4 @@
  -BeanPostProcessor的before方法-initializingBean的afterPropeties方法-
  -自定义初始化方法-BeanPostProcessor的after方法-distroy bean方法。
  （2）Spring中转配Bean的三种方式
-   使用XML    在java中显示装配  使用自动装配的方式
+ 使用自动装配的方式    在java中显示装配（javaConfig）      使用XML     
