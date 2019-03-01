@@ -14,3 +14,13 @@
  使用自动装配的方式    在java中显示装配（javaConfig）      使用XML     
  (3)Spring中bean的单例性
  (4)对象的生产 注意使用@ContextConfiguration  有位置确认(XML)和class确认两种
+ (5)Spring中不同环境的开发
+   定义：使用@profile对bean的创建环境进行定义   
+   使用（设置spring.profiles.active和spring.profiles.default参数对环境进行设置）：
+   作为DispatcherServlet的初始化参数；
+	作为Web应用的上下文参数；
+	作为JNDI条目；
+	作为环境变量；
+	作为JVM的系统属性；
+	在集成测试类上，使用@ActiveProfiles注解设置
+ 

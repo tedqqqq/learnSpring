@@ -1,0 +1,7 @@
+1.在javaConfig中
+        引入另外一个javaCongfig使用@import（@Import(CDPlayerConfig.class)）
+        引入XML文件使用@importResource（@ImportResource("classpath:cd-config.xml")）
+  
+  2.在XML中引入
+       引入javaConfig使用 class=“”
+       引入XML使用import  resource=“”
