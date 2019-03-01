@@ -23,4 +23,5 @@
 	作为环境变量；
 	作为JVM的系统属性；
 	在集成测试类上，使用@ActiveProfiles注解设置
- 
+ (6)处理自动装配的歧义性
+  使用@primary或者primary=true来让此bean或者component作为首选项

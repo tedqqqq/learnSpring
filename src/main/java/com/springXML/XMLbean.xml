@@ -8,8 +8,9 @@
 	http://www.springframework.org/schema/util 
     http://www.springframework.org/schema/util/spring-util.xsd">
 
-<!--
-		<bean  id="bean1" class="com.springXML.XMLConstructorBean">
+
+		<!-- 多个相同class的时候首选这  primary -->
+		<bean  id="bean0" class="com.springXML.XMLConstructorBean" primary="true">
 		 <constructor-arg ref="simpleBean" />
 		    <constructor-arg value="this is springTest" />
 		    <constructor-arg>
@@ -30,7 +31,7 @@
 		      </list>
 		    </constructor-arg>
 		</bean>
-		  -->
+		
 		  
 		  <!-- 构造器使用c表达式 可以是位置 构造器中参数的名字   c表达式不能适用于集合-->
 		<bean  id="bean1" class="com.springXML.XMLConstructorBean" 	 c:_0-ref="simpleBean"   c:_1="The Beatles">
@@ -57,7 +58,7 @@
 		<bean id="simpleBean" class="com.springXML.SimpleBean"></bean>
 		
 		
-		<!--  
+	
 		<bean id="bean2" class="com.springXML.XMLSetBean"> 
 		<property name="simpleBean" ref="simpleBean"></property>
 		<property name="name" value="this is text"></property>
@@ -68,13 +69,13 @@
 		 </list>
 		</property>
 		</bean>
-		-->
+
 		
 		
 	
   
 		<!-- 使用P标签     使用util的时候 注意头部添加标签的location-->
-		<bean id="bean2" class="com.springXML.XMLSetBean"
+		<bean id="bean3" class="com.springXML.XMLSetBean"   primary="true"
 		 p:simpleBean-ref="simpleBean"    p:name="你好"     p:listAddress-ref="trackList"> 
 		</bean>
 		
