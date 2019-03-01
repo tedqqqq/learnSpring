@@ -1,4 +1,4 @@
-package com.pojo;
+package com.spring;
 
 public class Person {
 	

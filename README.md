@@ -5,7 +5,7 @@
 1.永远在while循环中对条件进行判断而不是if语句中进行wait条件的判断；
 2.使用NotifyAll而不是使用notify。:
 
-2.spring框架
+2.spring框架  注意Spring的版本的问题
 （1）Bean的生命周期  大致11步骤
  实例化-填充属性-setBeanName-setBeanFactory-setApplicationContext-
  -BeanPostProcessor的before方法-initializingBean的afterPropeties方法-
