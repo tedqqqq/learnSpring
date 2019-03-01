@@ -13,3 +13,4 @@
  （2）Spring中转配Bean的三种方式
  使用自动装配的方式    在java中显示装配（javaConfig）      使用XML     
  (3)Spring中bean的单例性
+ (4)对象的生产 注意使用@ContextConfiguration  有位置确认(XML)和class确认两种
