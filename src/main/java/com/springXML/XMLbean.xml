@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:c="http://www.springframework.org/schema/c"
+	 xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--
+		<bean  id="bean1" class="com.springXML.XMLConstructorBean">
+		 <constructor-arg ref="simpleBean" />
+		    <constructor-arg value="this is springTest" />
+		    <constructor-arg>
+		      <list>
+		        <value>Sgt. Pepper's Lonely Hearts Club Band</value>
+		        <value>With a Little Help from My Friends</value>
+		        <value>Lucy in the Sky with Diamonds</value>
+		        <value>Getting Better</value>
+		        <value>Fixing a Hole</value>
+		        <value>She's Leaving Home</value>
+		        <value>Being for the Benefit of Mr. Kite!</value>
+		        <value>Within You Without You</value>
+		        <value>When I'm Sixty-Four</value>
+		        <value>Lovely Rita</value>
+		        <value>Good Morning Good Morning</value>
+		        <value>Sgt. Pepper's Lonely Hearts Club Band (Reprise)</value>
+		        <value>A Day in the Life</value>
+		      </list>
+		    </constructor-arg>
+		</bean>
+		  -->
+		  
+		  <!-- 构造器使用c表达式 可以是位置 构造器中参数的名字   c表达式不能适用于集合-->
+		<bean  id="bean1" class="com.springXML.XMLConstructorBean" 	 c:_0-ref="simpleBean"   c:_1="The Beatles">
+		    <constructor-arg>
+		      <list>
+		        <value>Sgt. Pepper's Lonely Hearts Club Band</value>
+		        <value>With a Little Help from My Friends</value>
+		        <value>Lucy in the Sky with Diamonds</value>
+		        <value>Getting Better</value>
+		        <value>Fixing a Hole</value>
+		        <value>She's Leaving Home</value>
+		        <value>Being for the Benefit of Mr. Kite!</value>
+		        <value>Within You Without You</value>
+		        <value>When I'm Sixty-Four</value>
+		        <value>Lovely Rita</value>
+		        <value>Good Morning Good Morning</value>
+		        <value>Sgt. Pepper's Lonely Hearts Club Band (Reprise)</value>
+		        <value>A Day in the Life</value>
+		      </list>
+		    </constructor-arg>
+		</bean>
+		
+		
+		<bean id="simpleBean" class="com.springXML.SimpleBean"></bean>
+		
+		
+		<!--  
+		<bean id="bean2" class="com.springXML.XMLSetBean"> 
+		<property name="simpleBean" ref="simpleBean"></property>
+		<property name="name" value="this is text"></property>
+		<property name="listAddress">
+		 <list>
+		   		<value>hello world</value>
+		   		<value>hello kitty</value>
+		 </list>
+		</property>
+		</bean>
+		-->
+		
+		
+	
+  
+		<!-- 使用P标签     使用util的时候 注意头部添加标签的location-->
+		<bean id="bean2" class="com.springXML.XMLSetBean"
+		 p:simpleBean-ref="simpleBean"    p:name="你好"     p:listAddress-ref="trackList"> 
+		</bean>
+		
+			<util:list id="trackList">  
+		    <value>Sgt. Pepper's Lonely Hearts Club Band</value>
+		    <value>With a Little Help from My Friends</value>
+		    <value>Lucy in the Sky with Diamonds</value>
+		    <value>Getting Better</value>
+		    <value>Fixing a Hole</value>
+		    <value>She's Leaving Home</value>
+		    <value>Being for the Benefit of Mr. Kite!</value>
+		    <value>Within You Without You</value>
+		    <value>When I'm Sixty-Four</value>
+		    <value>Lovely Rita</value>
+		    <value>Good Morning Good Morning</value>
+		    <value>Sgt. Pepper's Lonely Hearts Club Band (Reprise)</value>
+		    <value>A Day in the Life</value>
+		  </util:list>
+</beans>

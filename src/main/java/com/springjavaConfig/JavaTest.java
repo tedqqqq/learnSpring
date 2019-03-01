@@ -10,8 +10,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes=JavaConfig.class)
 public class JavaTest {
 
-	  @Autowired
-	  private Person person;
+//	  @Autowired
+//	  private Person person;
 	  
 	  @Autowired
 	  private Man man;

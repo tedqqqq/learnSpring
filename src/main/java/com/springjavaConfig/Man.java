@@ -1,13 +1,18 @@
 package com.springjavaConfig;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Man {
 	
+	public  Person person;
+	
+	  @Autowired
 	public Man(Person person) {
 		super();
 		this.person = person;
 	}
 
-	public  Person person;
+
 
 
 	public  void manInfo() {
