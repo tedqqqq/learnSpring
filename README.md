@@ -25,3 +25,8 @@
 	在集成测试类上，使用@ActiveProfiles注解设置
  (6)处理自动装配的歧义性
   使用@primary或者primary=true来让此bean或者component作为首选项
+  使用@Quaifier自定义注解类（自定义Quaifier和使用Quaifier("XXX")）
+  (7)bean的作用域
+    使用的注解@Scope  
+    一共有四种类型 Singleton（默认） Prototype  Session(Web) Request(Web)
+    proxyMode代理模式（类 接口）

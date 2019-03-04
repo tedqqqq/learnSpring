@@ -1,7 +1,10 @@
 package com.springjavaConfig;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 
 //java的显示装配
 @Configuration
@@ -20,4 +23,6 @@ public class JavaConfig {
 	public Person createPerson() {
 		return new Person();
 	}
+	
+
 }

@@ -3,6 +3,8 @@ package com.springjavaConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -21,7 +23,13 @@ public class JavaTest {
 	//  person.personInfo();
 	  man.manInfo();
   }
-
+	@Autowired
+	Environment env;
+	
+	@Test
+	public void jdj() {
+		System.out.println(env.containsProperty("name"));
+	}
 
 
 }
