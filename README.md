@@ -6,6 +6,9 @@
 2.使用NotifyAll而不是使用notify。:
 
 2.spring框架  注意Spring的版本的问题
+
+DI是应用对象之间的解耦  AOP是横切关注点与它们所影响的对象之间的解耦
+
 （1）Bean的生命周期  大致11步骤
  实例化-填充属性-setBeanName-setBeanFactory-setApplicationContext-
  -BeanPostProcessor的before方法-initializingBean的afterPropeties方法-
@@ -30,3 +33,21 @@
     使用的注解@Scope  
     一共有四种类型 Singleton（默认） Prototype  Session(Web) Request(Web)
     proxyMode代理模式（类 接口）
+   (8)外部注入信息
+     使用外部注入方式（${}）  使用SPEL表达式（#{}）
+    (9)面向切面编程
+    
+    Aop的基本概念 ：
+    
+    通知（定义类去干什么 什么时候去干  五大通知类型）  
+    连接点（虚拟，程序执行过程中引入通知的点   程序执行开始、程序抛出异常、程序执行结束...）
+    切点（符合切面执行的位置，一个切点里面可以包括很多个连接点）   
+    切面（包括了切点和通知）  
+    引入（Introduction）：引介是一种特殊的增强，它为类添加一些属性和方法。这样，即使一个业务类原本没有实现某个接口，通过引介功能，可以动态的未该业务类添加接口的实现逻辑，让业务类成为这个接口的实现类。
+	织入（Weaving）：织入是将增强添加到目标类具体连接点上的过程，AOP有三种织入方式：①编译期织入：需要特殊的Java编译期（例如AspectJ的ajc）；②装载期织入：要求使用特殊的类加载器，在装载类的时候对类进行增强；③运行时织入：在运行时为目标类生成代理实现增强。Spring采用了动态代理的方式实现了运行时织入，而AspectJ采用了编译期织入和装载期织入的方式。 
+	
+	spring aop的特点：
+	1.spring只支持方法级别的连接点
+	2.spring是在运行时通知对象的
+
+     
