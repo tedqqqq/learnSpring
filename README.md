@@ -35,7 +35,7 @@ DI是应用对象之间的解耦  AOP是横切关注点与它们所影响的对�
     proxyMode代理模式（类 接口）
    (8)外部注入信息
      使用外部注入方式（${}）  使用SPEL表达式（#{}）
-    (9)面向切面编程
+    (9)面向切面编程（代理实现@EnableAspectJAutoProxy）
     
    Aop的基本概念 ：
     
@@ -50,4 +50,6 @@ spring aop的特点：
 	1.spring只支持方法级别的连接点
 	2.spring是在运行时通知对象的
     3.spring中通知的执行顺序：https://blog.csdn.net/qq_32331073/article/details/80596084
+    4.通过代理是实现aop的功能
+spring中的环绕通知 通过ProceedingJoinPoint的proceed将执行的控制权交给被通知的方法
      
