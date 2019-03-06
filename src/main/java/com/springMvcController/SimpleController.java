@@ -14,4 +14,9 @@ public class SimpleController {
 		return " 使用spring mvc进行编写";
 		
 	}
+	
+	@RequestMapping(value="/mainPage",method=GET)
+	public String mainPage() {
+		return "home";
+	}
 }
