@@ -8,6 +8,9 @@
   <name>learnSpring Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
+  
+<!--  5.0.8.RELEASE -->
+ 
   <properties>
       <spring.version>4.0.7.RELEASE</spring.version>
   </properties>
@@ -24,21 +27,30 @@
     
 
     
-    <!-- 添加spring 依赖 -->
-
-    
+    <!-- 添加spring 依赖 -->   
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
         <version>${spring.version}</version>
     </dependency>
-    
-    
+        
    <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-test</artifactId>
     <version>${spring.version}</version>
 </dependency>
+
+<!--  添加Spring mvc依赖   注意和spring版本的对应关系-->
+<dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>4.0.7.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.0.7.RELEASE</version>
+    </dependency>
 
   </dependencies>
   
