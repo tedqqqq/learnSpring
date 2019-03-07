@@ -62,8 +62,6 @@ public class SimpleController {
 		model.addAttribute("name"+ name);
 		//使用redirect进行url的重定向 此时返回的就是url的值了 
 		//同样的forward:也会让controller直接进行url
-//	    Spitter spitte=new Spitter("dsfsfsdf", "dsfsadfsdfdsf", "dfsgdfgdfgdfg", "khjkgjkgh", "fdsdsfgdsf@qq.com");
-//	    model.addAttribute(spitte);
 	    return "profile";
 	}
 }
