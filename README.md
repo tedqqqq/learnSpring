@@ -61,3 +61,4 @@ Spring web的运用 Spring MVC
  		AbstractAnnotationConfigDispatcherServlet-Initializer
  第一个是：DispatcherServlet（用来加载web相关的bean 比如说：视图解析器、处理器映射和控制器等）
  第二个是：ContextLoaderListener：用来加载应用中其他的bean
+ 2,在Spring的类中注入接口，那么spring框架会在实例化中自动装配接口的实现类
