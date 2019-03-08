@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/style.css" />" >
   </head>
   <body>
-    <h1>Your Profile</h1>
+    <h1>profile</h1>
     <c:out value="${name}" /><br/>
   </body>
 </html>
