@@ -65,15 +65,16 @@ Spring web的运用 Spring MVC
  3.thymeleaf引擎中${}是对象表达式，不如用来获取model中key为XX的对象
  而*{}是选择表达式，他是基于某一个选中对象计算的。
  4.过滤器是基于selvet的，拦截器是基于spring的。总体上拦截器更好。
- //过滤器  拦截器的执行顺序
- 0：过滤器1的初始化方法
-1：过滤器1，客户端向Servlet发送的请求被我拦截到了
-2：拦截器1的前置方法 preHandle
-3：拦截器2的前置方法 preHandle
-4: controller主方法
-5：拦截器2的后置方法postHandle(在controller主方法执行之后执行)
-6：拦截器1的后置方法postHandle(在controller主方法执行之后执行)
-7：拦截器2的完成后方法afterCompletion(在DispatcherServlet处理完请求后，才会执行)
-8：拦截器1的完成后方法afterCompletion(在DispatcherServlet处理完请求后，才会执行)
-9：过滤器1，Servlet向客户端发送的响应被我拦截到了
-10：过滤器的销毁方法
+		 //过滤器  拦截器的执行顺序（https://blog.csdn.net/huyiju/article/details/83028720）
+		 0：过滤器1的初始化方法
+		1：过滤器1，客户端向Servlet发送的请求被我拦截到了
+		2：拦截器1的前置方法 preHandle
+		3：拦截器2的前置方法 preHandle
+		4: controller主方法
+		5：拦截器2的后置方法postHandle(在controller主方法执行之后执行)
+		6：拦截器1的后置方法postHandle(在controller主方法执行之后执行)
+		7：拦截器2的完成后方法afterCompletion(在DispatcherServlet处理完请求后，才会执行)
+		8：拦截器1的完成后方法afterCompletion(在DispatcherServlet处理完请求后，才会执行)
+		9：过滤器1，Servlet向客户端发送的响应被我拦截到了
+		10：过滤器的销毁方法
+5.关于spring mvc的配置 可以在java-java ，xml-xml，xml-java（上下文信息:添加org.springframework.web.context.support.AnnotationConfigWebApplicationContext，让spring mvc知道后面是使用java来进行装配应用上下文的）
