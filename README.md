@@ -82,3 +82,7 @@ Spring web的运用 Spring MVC
 	@ControllerAdvice通知声明 所有出现异常的地方均可使用
 7.重定向
   使用redirect进行重定向操作 控制器不会解析成视图的名字而是解析成地址.但是此时原来请求中的数据无法传递到新的请求中，
+  
+  
+  Spring的Spring Web Flow的使用
+  1.web flow的三大组件 状态 流程 数据
