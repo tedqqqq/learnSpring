@@ -78,3 +78,7 @@ Spring web的运用 Spring MVC
 		9：过滤器1，Servlet向客户端发送的响应被我拦截到了
 		10：过滤器的销毁方法
 5.关于spring mvc的配置 可以在java-java ，xml-xml，xml-java（上下文信息:添加org.springframework.web.context.support.AnnotationConfigWebApplicationContext，让spring mvc知道后面是使用java来进行装配应用上下文的）
+6.@ExceptionHandler(异常类型)处理异常的方法注解  同一类中使用
+	@ControllerAdvice通知声明 所有出现异常的地方均可使用
+7.重定向
+  使用redirect进行重定向操作 控制器不会解析成视图的名字而是解析成地址.但是此时原来请求中的数据无法传递到新的请求中，
