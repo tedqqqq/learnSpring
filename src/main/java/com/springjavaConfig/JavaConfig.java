@@ -14,6 +14,7 @@ public class JavaConfig {
 	//bean后面一个跟一个name=“” 用作beanid  默认情况下是createMan
 	//bean的单例问题 遇见相同类型的bean不会重复创建 
 	//此处的Person会根据其他位置的Bean（不一定是用一个文件里面的Bean）进行自动装配
+	//自动注入Person
 	@Bean
 	public Man createMan(Person person) {
 			return new Man(person);		
