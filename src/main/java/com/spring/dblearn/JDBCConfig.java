@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
 import org.springframework.jndi.JndiObjectFactoryBean;
@@ -61,5 +62,16 @@ public class JDBCConfig {
 	  @Bean 
 	  public Person getPerosn() {
 		return   new Person();
+	  }
+	  
+	  @Bean
+	  public JdbcTemplate getJDBCTemplate(ComboPooledDataSource comboPooledDataSource) {
+		  return  new JdbcTemplate(comboPooledDataSource);
+	  }
+	  
+	  @Bean
+	  public CityRepository getCityRepository(JdbcTemplate jj) {
+		  return new CityRepositoryImp(jj);
+		  
 	  }
 }

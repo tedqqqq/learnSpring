@@ -29,6 +29,9 @@ private DataSource dataSource;
 private ComboPooledDataSource  comboPooledDataSource;
 
 
+@Autowired
+private CityRepository  cityRepository;
+
 
 
   @Test
@@ -49,16 +52,18 @@ private ComboPooledDataSource  comboPooledDataSource;
 
   @Test
   public void Test() {
-	  try {
-		comboPooledDataSource.getConnection();
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+	  City cc=new City();
+	  cc.setCity_name("fasdadfs");
+	  cc.setDescription("dasfadf");
+	  cc.setId(12);
+	  cc.setProvince_id(334);
+	  cityRepository.addCity(cc);
+	  
   }
 
-
-
-
+  @Test
+  public  void findCity() {
+	  System.out.println(cityRepository.findCityById(12).getDescription());
+  }
 
 }
