@@ -1,4 +1,4 @@
-package com.springHibernate;
+package com.springJPA;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,13 +9,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=HibernateConfig.class)
-public class TestHibernate {
+@ContextConfiguration(classes=JPAConfig.class)
+public class TestJPA {
 
 
 
 @Autowired
-private HibernateRepository  cityRepository;
+private JPARepository  jPARepository;
 
 
 
@@ -23,7 +23,7 @@ private HibernateRepository  cityRepository;
   @Test
   @Transactional
   public  void findCity() {
-	  System.out.println(cityRepository.getCityMessage(1).getCity_name());
+	  	System.out.println(jPARepository.getCityMessage(1).getCity_name());
   }
 
 }

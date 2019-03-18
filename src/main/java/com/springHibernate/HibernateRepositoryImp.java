@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+//自动装配此对象
 @Repository
 public class HibernateRepositoryImp implements HibernateRepository{
 	

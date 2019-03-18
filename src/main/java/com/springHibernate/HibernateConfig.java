@@ -19,6 +19,12 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
+
+/**
+ * 说明  注意此处事务的处理
+ * @author invengo
+ *
+ */
 @Configuration
 @ComponentScan
 @EnableTransactionManagement
