@@ -5,10 +5,13 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
@@ -17,14 +20,19 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @EnableCaching
 @Configuration
+@PropertySource("classpath:/redis.properties")
 public class cacheConfig {
+	
+	@Autowired
+	Environment env;
+	
 	//redis配置
 	@Bean
 	public RedisConnectionFactory redisCF() {
 		JedisConnectionFactory jcf= new JedisConnectionFactory();
-		jcf.setHostName("192.168.7.124");
-		jcf.setPassword("111111");
-		jcf.setPort(6379);
+		jcf.setHostName(env.getProperty("redis.ip"));
+		jcf.setPassword(env.getProperty("redis.password"));
+		jcf.setPort(Integer.parseInt(env.getProperty("redis.port")));
 		return jcf;
 	}
 	//redis模板
